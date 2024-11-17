@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.social_media_url = 'https://www.lessney.com'
     s.requires_arc     = true
     s.documentation_url = 'https://github.com/pcjbird/iOSLogBrowserSDK/blob/master/README.md'
-    s.screenshot       = 'https://github.com/pcjbird/iOSLogBrowserSDK/blob/master/logo.png'
+    s.screenshot       = 'https://raw.githubusercontent.com/pcjbird/iOSLogBrowserSDK/refs/heads/master/logo.png'
 
     s.platform         = :ios, '10.0'
     s.frameworks       = 'Foundation', 'UIKit'
