@@ -1,5 +1,4 @@
 ![logo](logo.png)
-[![Build Status](http://img.shields.io/travis/pcjbird/iOSLogBrowserSDK/master.svg?style=flat)](https://travis-ci.org/pcjbird/iOSLogBrowserSDK)
 [![Pod Version](http://img.shields.io/cocoapods/v/iOSLogBrowserSDK.svg?style=flat)](http://cocoadocs.org/docsets/iOSLogBrowserSDK/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/iOSLogBrowserSDK.svg?style=flat)](http://cocoadocs.org/docsets/iOSLogBrowserSDK/)
 [![Pod License](http://img.shields.io/cocoapods/l/iOSLogBrowserSDK.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
