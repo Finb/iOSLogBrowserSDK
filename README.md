@@ -1,6 +1,6 @@
 ![logo](logo.png)
-[![Pod Version](http://img.shields.io/cocoapods/v/iOSLogBrowserSDK.svg?style=flat)](http://cocoadocs.org/docsets/iOSLogBrowserSDK/)
-[![Pod Platform](http://img.shields.io/cocoapods/p/iOSLogBrowserSDK.svg?style=flat)](http://cocoadocs.org/docsets/iOSLogBrowserSDK/)
+[![Pod Version](http://img.shields.io/cocoapods/v/iOSLogBrowserSDK.svg?style=flat)](https://cocoapods.org/pods/iOSLogBrowserSDK)
+[![Pod Platform](http://img.shields.io/cocoapods/p/iOSLogBrowserSDK.svg?style=flat)](https://cocoapods.org/pods/iOSLogBrowserSDK)
 [![Pod License](http://img.shields.io/cocoapods/l/iOSLogBrowserSDK.svg)]()
 [![GitHub release](https://img.shields.io/github/release/pcjbird/iOSLogBrowserSDK.svg)](https://github.com/pcjbird/iOSLogBrowserSDK/releases)
 [![GitHub release](https://img.shields.io/github/release-date/pcjbird/iOSLogBrowserSDK.svg)](https://github.com/pcjbird/iOSLogBrowserSDK/releases)
