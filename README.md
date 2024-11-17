@@ -29,7 +29,7 @@
 方法一：`iOSLogBrowserSDK` is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
 ```
-pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git', :modular_headers => true
+pod 'XLFacility', :modular_headers => true
 pod 'iOSLogBrowserSDK'
 ```
 
