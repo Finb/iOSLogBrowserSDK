@@ -1,4 +1,4 @@
-# CHANGELOG
+# RELEASES
 
 ## pcjbird 2024-11-18 Version:1.0.2 Build:20241118002
 

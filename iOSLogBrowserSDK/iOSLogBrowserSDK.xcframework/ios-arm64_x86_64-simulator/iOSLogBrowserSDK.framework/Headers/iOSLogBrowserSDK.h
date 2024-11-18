@@ -9,16 +9,11 @@
 //          一个实时的 iOS 日志追踪工具，可以在本地区域网络内通过 PC 网页浏览器查看 iOS 日志，他将类似 Xcode 控制台一样自动滚动显示日志。
 //
 //  构建版本:
-//      pcjbird    2024-11-18  Version:1.0.1 Build:20241118001
+//      pcjbird    2024-11-18  Version:1.0.2 Build:20241118002
 
 #import <Foundation/Foundation.h>
 #import <iOSLogBrowserSDK/iOSLogBrowserSDKDefines.h>
 #import <iOSLogBrowserSDK/iOSLogBrowserOption.h>
-#if __has_include(<XLFacility/XLFacilityMacros.h>)
-#import <XLFacility/XLFacilityMacros.h>
-#else
-#import "XLFacilityMacros.h"
-#endif
 
 //! Project version number for iOSLogBrowserSDK.
 FOUNDATION_EXPORT double iOSLogBrowserSDKVersionNumber;
@@ -28,10 +23,25 @@ FOUNDATION_EXPORT const unsigned char iOSLogBrowserSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <iOSLogBrowserSDK/PublicHeader.h>
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 /// iOS Log Browser SDK
+///
+/// This SDK provides real-time log viewing capabilities through a local-area-network web browser interface.
+///
+/// ## Dependencies
+/// This SDK depends on XLFacility for logging functionality.
+///
+/// ## Integration Steps
+/// 1. Import XLFacility headers in your project
+/// 2. Use XLFacility macros for logging:
+///   - `XLOG_INFO`
+///   - `XLOG_DEBUG`
+///   - `XLOG_ERROR`
+///   - `XLOG_WARNING`
+///
+/// > Important:
+/// Make sure to properly set up XLFacility in your project before using this SDK.
 @interface iOSLogBrowserSDK : NSObject
 
 + (instancetype)new NS_UNAVAILABLE;
@@ -42,17 +52,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// SDK version
 /// - Returns:
 /// SDK version
-+(NSString*) sdkVersion;
++ (NSString *)sdkVersion;
 
 /// SDK build version
 /// - Returns:
 /// SDK build version
-+(NSString*) sdkBuild;
++ (NSString *)sdkBuild;
 
 /// SDK release date
 /// - Returns:
 /// SDK release date
-+(NSString*) sdkReleaseDate;
++ (NSString *)sdkReleaseDate;
 
 #pragma mark Start the internal iOS http log server
 
@@ -61,13 +71,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - option: the sdk initialize option
 ///
 /// > Important: the default http server port is 8080
-+ (void)startWithOption:(iOSLogBrowserOption* _Nullable)option;
++ (void)startWithOption:(iOSLogBrowserOption *_Nullable)option;
 
 #pragma mark Stop
 
 /// Stop
 + (void)stop;
-
 
 @end
 

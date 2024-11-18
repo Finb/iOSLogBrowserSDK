@@ -9,7 +9,6 @@ target 'iOSLogBrowserSDKDemo' do
   #use_frameworks!
 
   # Pods for iOSLogBrowserSDKDemo
-  pod 'XLFacility', git: 'https://github.com/pcjbird/XLFacility.git', :modular_headers => true
   pod 'iOSLogBrowserSDK', :path => '../'
 end
 
