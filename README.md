@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/pcjbird/iOSLogBrowserSDK/master/logo.png)
+![logo](https://github.com/pcjbird/iOSLogBrowserSDK/raw/master/logo.png)
 
 [![Pod Version](http://img.shields.io/cocoapods/v/iOSLogBrowserSDK.svg?style=flat)](https://cocoapods.org/pods/iOSLogBrowserSDK)
 [![Pod Platform](http://img.shields.io/cocoapods/p/iOSLogBrowserSDK.svg?style=flat)](https://cocoapods.org/pods/iOSLogBrowserSDK)
@@ -22,7 +22,7 @@
 
 ## 演示 / Demo
 
-<p align="center"><img src="https://raw.githubusercontent.com/pcjbird/iOSLogBrowserSDK/master/demo.jpg" title="demo"></p>
+<p align="center"><img src="https://github.com/pcjbird/iOSLogBrowserSDK/raw/master/demo.jpg" title="demo"></p>
 
 ## 安装 / Installation
 
