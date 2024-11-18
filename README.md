@@ -34,17 +34,67 @@ pod 'iOSLogBrowserSDK'
 
 ## 使用 / Usage
 
-```
+```objc
   #import <XLFacility/XLFacilityMacros.h>
-  #import <iOSLogBrowserSDK/iOSLogBrowserSDK.h> 
+  #import <iOSLogBrowserSDK/iOSLogBrowserSDK.h>
+  #import <Reachability/Reachability.h>
+```
+
+```objc
+  @interface AppDelegate ()
+
+  @property(nonatomic, assign) BOOL started;
+
+  @end
+```
+
+```objc
+
+@implementation AppDelegate
 
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         // Override point for customization after application launch.
-        [iOSLogBrowserSDK startWithOption:nil];
-        XLOG_INFO(@"您正在使用 iOS 局域网日志查看服务！");
+        self.started = NO;
+        Reachability* reachability = [Reachability reachabilityForLocalWiFi];
+        if([reachability isReachable])
+        {
+            [self start];
+        }
+        __weak typeof(self) weakSelf = self;
+        reachability.reachableBlock = ^(Reachability *reachability) {
+            NSLog(@"%@", @"网络可用");
+            __strong typeof(self) strongSelf = weakSelf;
+            if(!strongSelf) return;
+            if(strongSelf.started)
+            {
+                return;
+            }
+            [strongSelf start];
+        };
+        reachability.unreachableBlock = ^(Reachability *reachability) {
+            NSLog(@"%@", @"网络不可用");
+        };
+        [reachability startNotifier];
         return YES;
   }
+
+  -(void) start
+  {
+      iOSLogBrowserOption* option = [iOSLogBrowserOption defaultOption];
+      option.suspendInBackground = YES;
+      [iOSLogBrowserSDK startWithOption:option];
+
+      XLOG_INFO(@"%@", @"您正在使用 iOS 局域网日志查看服务！");
+      self.started = YES;
+  }
+
+  @end
+
 ```
+
+⚠️ 重要提醒:
+
+1. 如果是在 iOS 真机设备上使用，请确保您的 App 拥有访问本地 WiFi 的权限。
 
 ## 关注我们 / Follow us
 

@@ -10,6 +10,7 @@ target 'iOSLogBrowserSDKDemo' do
 
   # Pods for iOSLogBrowserSDKDemo
   pod 'iOSLogBrowserSDK', :path => '../'
+  pod 'Reachability'
 end
 
 post_install do |installer|
