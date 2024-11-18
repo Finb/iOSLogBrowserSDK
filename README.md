@@ -30,6 +30,7 @@
 
 ```
 pod 'iOSLogBrowserSDK'
+pod 'Reachability'
 ```
 
 ## 使用 / Usage
