@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// SDK Initialize Option
-@interface iOSLogBrowserOption : NSObject<NSCopying>
+@interface iOSLogBrowserOption : NSObject <NSCopying>
 
 /// the minimum log level
 ///
@@ -54,9 +54,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///  > Important: The default value is NO.
 @property(nonatomic) BOOL suspendInBackground;
 
+/// The format string for console logger output
+///
+/// The format string controls how log messages are formatted when output to console.
+/// You can customize the format to include various components like timestamp, log level, etc.
+///
+/// > Important: The default value is `XLLoggerFormatString_NSLog`
+@property(nonatomic, copy, nullable) NSString* consoleLoggerFormatString;
+
 /// The default option
 + (instancetype)defaultOption;
-
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

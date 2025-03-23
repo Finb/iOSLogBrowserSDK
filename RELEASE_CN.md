@@ -1,5 +1,9 @@
 # 版本更新日志
 
+## pcjbird 2025-03-23 Version:1.0.4 Build:20250323001
+
+- SDK 初始化选项现在支持 `consoleLoggerFormatString`。
+
 ## pcjbird 2024-11-18 Version:1.0.3 Build:20241118003
 
 - 将日志等级的样式配置迁移至 HTML 模版中,实现暗黑模式下的日志显示效果优化。
